@@ -1,0 +1,8 @@
+{
+  "name": "DailyNotes",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
