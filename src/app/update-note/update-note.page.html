@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Update Note</ion-title>
+    <ion-buttons slot="end" (click)="updateNote()">
+      <ion-icon name="checkmark-circle-outline" slot="end" size="large" class="ion-padding"></ion-icon>
+    </ion-buttons>
+    <ion-buttons slot="end" (click)="deleteNote()">
+      <ion-icon name="trash-outline" slot="end" size="large" class="ion-padding" color="danger"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+      <ion-input [(ngModel)]="noteJudul" placeholder="title"></ion-input>
+    </ion-item>
+
+    <textarea [(ngModel)]="noteCatatan" style="resize: none; height: 100%; width: 100%; border: none;"></textarea>
+ 
+</ion-content>
