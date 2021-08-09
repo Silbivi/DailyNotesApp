@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="home()">
+      <ion-icon name="chevron-back-outline" color="dark" style="margin-left: 10px; width: 20px;"></ion-icon>
+    </ion-buttons>
+    <ion-title>Notes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let note of note; let i = index"  class="ion-margin" style="max-height: 130px;" (click)="editNote(note)">
+    <ion-card-header>
+      <ion-label style="font-weight: bold; font-size: medium;">{{ note.judul }}</ion-label>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label>{{ note.catatan }}</ion-label>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addNote()">
+      <ion-icon name="create-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
